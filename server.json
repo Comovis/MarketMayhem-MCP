@@ -1,0 +1,61 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "co.marketmayhem/mcp",
+  "description": "Launch and trade BSC tokens on Market Mayhem. Your own wallet signs; dry run by default; spend caps.",
+  "version": "0.1.0",
+  "packages": [
+    {
+      "registryType": "npm",
+      "identifier": "@marketmayhem/mcp",
+      "version": "0.1.0",
+      "transport": {
+        "type": "stdio"
+      },
+      "environmentVariables": [
+        {
+          "name": "MM_PRIVATE_KEY",
+          "description": "The agent's own wallet key. Signs locally; never sent anywhere. Unset: read-only.",
+          "isRequired": false,
+          "isSecret": true,
+          "format": "string"
+        },
+        {
+          "name": "MM_LIVE",
+          "description": "Set to 1 to let the agent send transactions. Unset: dry run.",
+          "isRequired": false,
+          "isSecret": false,
+          "format": "string"
+        },
+        {
+          "name": "MM_MAX_PER_TX",
+          "description": "Most one transaction may spend, per currency, e.g. BNB:0.05",
+          "isRequired": false,
+          "isSecret": false,
+          "format": "string"
+        },
+        {
+          "name": "MM_MAX_PER_DAY",
+          "description": "Most per UTC day, per currency, e.g. BNB:0.25",
+          "isRequired": false,
+          "isSecret": false,
+          "format": "string"
+        },
+        {
+          "name": "MM_ALLOW_TOKENS",
+          "description": "Comma-separated token addresses the agent may trade. Unset: any.",
+          "isRequired": false,
+          "isSecret": false,
+          "format": "string"
+        },
+        {
+          "name": "MM_API_KEY",
+          "description": "Optional Market Mayhem API key: higher limits, and you become the default referrer.",
+          "isRequired": false,
+          "isSecret": true,
+          "format": "string"
+        }
+      ]
+    }
+  ],
+  "websiteUrl": "https://marketmayhem.co"
+}
