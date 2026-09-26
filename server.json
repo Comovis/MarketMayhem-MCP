@@ -2,12 +2,12 @@
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
   "name": "co.marketmayhem/mcp",
   "description": "Launch and trade BSC tokens on Market Mayhem. Your own wallet signs; dry run by default; spend caps.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "packages": [
     {
       "registryType": "npm",
       "identifier": "@marketmayhem/mcp",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "transport": {
         "type": "stdio"
       },
@@ -57,5 +57,15 @@
       ]
     }
   ],
-  "websiteUrl": "https://marketmayhem.co"
+  "websiteUrl": "https://marketmayhem.co/developers/",
+  "repository": {
+    "url": "https://github.com/Comovis/MarketMayhem-MCP",
+    "source": "github"
+  },
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://marketmayhem.co/api/mcp"
+    }
+  ]
 }

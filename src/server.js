@@ -77,7 +77,17 @@ export async function createServer(deps = {}) {
     return { sent: true, did: built.explain, spent: spendText, tx: hash, allTransactions: hashes, status };
   };
 
-  const server = new McpServer({ name: 'marketmayhem', version: '0.1.0' });
+  const server = new McpServer({
+    name: 'marketmayhem',
+    title: 'Market Mayhem',
+    version: '0.1.1',
+    description: 'Launch and trade tokens on BNB Chain with your own wallet: dry run by default, within caps you set.',
+    websiteUrl: 'https://marketmayhem.co/developers/',
+    icons: [
+      { src: 'https://marketmayhem.co/favicon.svg', mimeType: 'image/svg+xml', sizes: ['any'] },
+      { src: 'https://marketmayhem.co/icon-192.png', mimeType: 'image/png', sizes: ['192x192'] },
+    ],
+  });
 
   server.registerTool('get_settings', {
     description: 'The live network, contracts, fees and pair currencies Market Mayhem uses. Read this first.',

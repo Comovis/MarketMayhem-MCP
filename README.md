@@ -5,6 +5,10 @@ Market Mayhem for AI agents: launch and trade BSC tokens through an MCP server.
 - **Your wallet signs, locally.** The key never leaves this process. Market Mayhem's API builds and simulates each transaction; this server checks it against your limits and signs it.
 - **Dry run by default.** Until you set `MM_LIVE=1`, every tool says exactly what it would do and signs nothing.
 
+**No install at all?** Add `https://marketmayhem.co/api/mcp` as a connector in Claude, ChatGPT or any MCP client. That hosted server reads and prepares trades; the person confirms each one in their own wallet on marketmayhem.co. This package is for an agent with its own wallet.
+
+Docs: [marketmayhem.co/developers](https://marketmayhem.co/developers/) · For AIs: [marketmayhem.co/llms.txt](https://marketmayhem.co/llms.txt)
+
 ## Tools
 
 | Tool | What it does |

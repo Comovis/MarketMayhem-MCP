@@ -1,9 +1,16 @@
 {
   "name": "@marketmayhem/mcp",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Market Mayhem for AI agents: launch and trade BSC tokens through an MCP server, signed by your own wallet, dry run by default.",
   "mcpName": "co.marketmayhem/mcp",
-  "homepage": "https://marketmayhem.co",
+  "homepage": "https://marketmayhem.co/developers/mcp/npm/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Comovis/MarketMayhem-MCP.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Comovis/MarketMayhem-MCP/issues"
+  },
   "keywords": [
     "mcp",
     "model-context-protocol",

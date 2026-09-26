@@ -20,7 +20,7 @@ export function api({ base = process.env.MM_API_URL ?? 'https://marketmayhem.co/
     const res = await fetchImpl(`${root}${path}`, {
       method,
       headers: {
-        'x-mm-client': 'marketmayhem-mcp/0.1',
+        'x-mm-client': 'marketmayhem-mcp/0.1.1',
         ...(key ? { 'x-api-key': key } : {}),
         ...(body ? { 'content-type': 'application/json' } : {}),
       },
